@@ -16,7 +16,7 @@ public class Main {
         int diasTrabajados = horasTrabajadas.length;
 
         // Cálculo de horas extra (simulación con error de iteración)
-        int[] horasExtra = calcularHorasExtra(horasTrabajadas);
+        int horasExtra = calcularHorasExtra(horasTrabajadas);
 
         // Cálculo del pago semanal con horas y días trabajados
         calcularPagoSemanal(horasTrabajadas, horasExtra, tarifaPorHora, tarifaPorHoraExtra);
