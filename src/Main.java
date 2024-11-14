@@ -28,13 +28,13 @@ public class Main {
     // Método para calcular el pago considerando horas y días trabajados
     public static void calcularPagoSemanal(int[] horasTrabajadas, int[] horasExtra, int tarifaPorHora, int tarifaPorHoraExtra) {
         //Calculamos el pago de las horas normales
-        for (int i = 0; i < horasTrabajadas.length; i++) {
-            pagoSemanal += calcularPago(min(horasTrabajadas[i],8), tarifaPorHora);
+        for (int i = 0; i <= horasTrabajadas.length; i++) {
+            pagoSemanal += calcularPago(horasTrabajadas[i], tarifaPorHora);
         }
 
         //calculamos el pago de las horas extra
-        for (int i = 0; i < horasTrabajadas.length; i++) {
-            pagoSemanal += calcularPago(horasExtra[i], tarifaPorHoraExtra);
+        for (int i = 0; i <= horasTrabajadas.length; i++) {
+            pagoSemanal += calcularPago(horasExtra[i], tarifaPorHoraExtra[i]);
         }
     }
 
@@ -43,18 +43,12 @@ public class Main {
         return horas * tarifa; // Cálculo correcto aquí
     }
 
-    // Método alternativo para calcular el pago sólo con horas y tarifa, sin días
-    public static void calcularPagoPorHoras(int horas, int tarifa) {
-        int pagoSimple = calcularPago(horas, tarifa);
-        pagoSemanal += pagoSimple;
-    }
-
     // Método que simula el cálculo de horas extra con un error en el bucle de iteración
     public static int[] calcularHorasExtra(int[] horasTrabajadas) {
         int[] horasExtra = new int[5];
 
-        for (int i = 0; i < horasTrabajadas.length; i++) {  // Error: debería ser i < horasTotales para evitar desbordamiento
-            horasExtra[i] = horasTrabajadas[i] - jornadaDiaria;
+        for (int i = 0; i <= horasTrabajadas.length; i++) {  // Error: debería ser i < horasTotales para evitar desbordamiento
+            horasExtra[i] = jornadaDiaria - horasTrabajadas[i];
         }
 
         return horasExtra;
