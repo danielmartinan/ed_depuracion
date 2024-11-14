@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         int[] horasTrabajadas = {8, 9, 8, 10, 8};
         int tarifaPorHora = 12;
-        int tarifaPorHoraExtra = 20;
+        Int tarifaPorHoraExtra = 20;
         int diasTrabajados = horasTrabajadas.length;
 
         // Cálculo de horas extra (simulación con error de iteración)
@@ -19,7 +19,7 @@ public class Main {
         calcularPagoSemanal(horasTrabajadas, horasExtra, tarifaPorHora, tarifaPorHoraExtra);
 
         // Imprimimos por pantalla el resultado
-        system.out.println("Pago semanal calculado: $" + pagoSemanal);
+        System.out.println("Pago semanal calculado: $" + pagoSemanal);
     }
 
     // Método para calcular el pago considerando horas y días trabajados
