@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 import static java.lang.Integer.min;
 
 public class Main {
