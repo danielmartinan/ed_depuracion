@@ -19,7 +19,7 @@ public class Main {
         calcularPagoSemanal(horasTrabajadas, horasExtra, tarifaPorHora, tarifaPorHoraExtra);
 
         // Imprimimos por pantalla el resultado
-        System.out.println("Pago semanal calculado: $" + pagoSemanal);
+        system.out.println("Pago semanal calculado: $" + pagoSemanal);
     }
 
     // Método para calcular el pago considerando horas y días trabajados
